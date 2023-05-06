@@ -98,28 +98,6 @@ public class NetworkManager : MonoBehaviour
 			1);
 	}
 
-    void Update()
-    {
-		//IPacket packet = PacketQueue.Instance.Pop();
-
-		// 패킷 리스트에 있는 내용 가져옴
-		List<IPacket> list = PacketQueue.Instance.PopAll();
-		foreach(IPacket packet in list)
-			PacketManager.Instance.HandlePacket(_session, packet);
-			
-		//if(packet != null)
-		//{
-		//	// packet handler 시작
-		//	PacketManager.Instance.HandlePacket(_session, packet);
-		//}
-    }
-
-	public void Send(ArraySegment<byte> sendBuff)
-    {
-		_session.Send(sendBuff);
-    }
-
-
 }
 ```
 
