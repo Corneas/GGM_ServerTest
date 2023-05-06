@@ -1,7 +1,7 @@
 유니티와 서버 연동 #1
 
 유니티와 서버연동을 할 때 가져와야 할 스크립트 목록
-(NetWork)
+<br>(NetWork)
 - Connector.cs
 - Session.cs
 - ServerSession.cs
