@@ -9,6 +9,7 @@
 - SendBuffer.cs
 
 (Packet)
+- ClientPacketManager.cs
 - GenPackets.cs
 - PacketHandler.cs
 - PacketQueue.cs
