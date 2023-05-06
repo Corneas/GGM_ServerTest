@@ -79,7 +79,6 @@ public class NetworkManager : MonoBehaviour
 {
 	// 서버 세션 생성
 	ServerSession _session = new ServerSession();
-	private WaitForSeconds waitSec3f = new WaitForSeconds(3f);
 
     void Start()
     {
