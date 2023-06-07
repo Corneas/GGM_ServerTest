@@ -41,7 +41,8 @@ static void TickRoom(GameRoom room, int tick = 100)
 		timer.Enabled = true;
 
 		_timers.Add(timer);
-}```
+}
+```
 
 TickRoom을 사용하여 원하는 틱마다 한 번씩 실행시킨다.
 
