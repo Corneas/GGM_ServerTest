@@ -35,24 +35,24 @@ public GameRoom Add(int mapId)
 ```cs
 public virtual void OnDead(GameObject attacker)
 {
-			if (Room == null)
-				return;
+	if (Room == null)
+	return;
 
-			S_Die diePacket = new S_Die();
-			diePacket.ObjectId = Id;
-			diePacket.AttackerId = attacker.Id;
-			Room.Broadcast(diePacket);
+	S_Die diePacket = new S_Die();
+	diePacket.ObjectId = Id;
+	diePacket.AttackerId = attacker.Id;
+	Room.Broadcast(diePacket);
 
-			GameRoom room = Room;
-			room.Push(room.LeaveGame, Id);
+	GameRoom room = Room;
+	room.Push(room.LeaveGame, Id);
 
-			Stat.Hp = Stat.MaxHp;
-			PosInfo.State = CreatureState.Idle;
-			PosInfo.MoveDir = MoveDir.Down;
-			PosInfo.PosX = 0;
-			PosInfo.PosY = 0;
+	Stat.Hp = Stat.MaxHp;
+	PosInfo.State = CreatureState.Idle;
+	PosInfo.MoveDir = MoveDir.Down;
+	PosInfo.PosX = 0;
+	PosInfo.PosY = 0;
 
-			room.Push(room.EnterGame, this);
+	room.Push(room.EnterGame, this);
 }
 ```
 
