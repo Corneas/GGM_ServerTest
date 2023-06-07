@@ -55,8 +55,9 @@ public virtual void OnDead(GameObject attacker)
 }
 ```
 
-OnDead의 LeaveGame, EnterGame을 Push로 바꿔줌으로 이제는 더이상 순서가 명확하지 않음. <br>
-경우에 따라 LeaveGame이 실행되기 전 좌표가 잡힐 수 있어 엉뚱한 좌표로 이동될 가능성이 생긴것. 
+OnDead의 LeaveGame, EnterGame을 Push로 바꿔줌으로 이제는 더이상 순서가 명확하지 않다.
+
+경우에 따라 LeaveGame이 실행되기 전 좌표가 잡힐 수 있어 엉뚱한 좌표로 이동될 가능성이 생긴것이다. 
 
 방법 1. push를 하지 않고 바로 실행되게끔 수정 <br>
 방법 2. 스탯과 좌표를 지정하는것 또한 Job으로 변경
