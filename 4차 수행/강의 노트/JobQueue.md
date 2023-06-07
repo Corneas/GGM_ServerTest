@@ -1,7 +1,8 @@
 JobQueue
 
-더이상 GameRoom에서 뿅 하고 실행시키는 것이 아닌 Task를 만들어 실행시킬 예정
-lock을 걸어 모든 함수를 제어하면 플레이어의 수가 조금만 늘어도 버벅거릴 수 있음. 그러므로 lock을 전부 지워주도록 하자
+더이상 GameRoom에서 뿅 하고 실행시키는 것이 아닌 Task를 만들어 실행시킬 예정이다
+
+lock을 걸어 모든 함수를 제어하면 플레이어의 수가 조금만 늘어도 버벅거릴 수 있기 때문에 lock을 전부 지워주도록 하자
 ```cs
 
 public GameRoom Add(int mapId)  
@@ -20,8 +21,6 @@ public GameRoom Add(int mapId)
     return gameRoom;
 }
 ```
-
-
 
 이렇게 Push를 할 것이지만, GameRoom의 Init은 static이 아니기 때문에 문제가 발생.
 
